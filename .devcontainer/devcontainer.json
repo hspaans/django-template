@@ -1,0 +1,30 @@
+{
+  "name": "Python 3 & PostgreSQL",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers-contrib/features/flake8:2": {},
+    "ghcr.io/devcontainers-contrib/features/yamllint:2": {}
+  },
+  "forwardPorts": [
+    8000,
+    5432
+  ],
+  "postCreateCommand": "pip install --user -r requirements.txt",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "EditorConfig.EditorConfig",
+        "ms-python.autopep8",
+        "ms-python.flake8"
+      ],
+      "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8",
+        "editor.formatOnSave": true
+      },
+      "python.formatting.provider": "none"
+    }
+  }
+}
