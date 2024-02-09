@@ -4,8 +4,7 @@ updates:
   - package-ecosystem: docker
     directory: /devcontainer/
     schedule:
-      interval: weekly
-      day: saturday
+      interval: monthly
     groups:
       Docker:
         patterns:
@@ -14,8 +13,7 @@ updates:
   - package-ecosystem: github-actions
     directory: /
     schedule:
-      interval: weekly
-      day: saturday
+      interval: monthly
     groups:
       GitHub-Actions:
         patterns:
@@ -24,8 +22,7 @@ updates:
   - package-ecosystem: pip
     directory: /
     schedule:
-      interval: weekly
-      day: saturday
+      interval: monthly
     groups:
       Python:
         patterns:
